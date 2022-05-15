@@ -1,0 +1,101 @@
+(base) emnichols@Lizs-MBP w255_flask_ci_demo % curl -sSL https://install.python-poetry.org | python3 -
+Retrieving Poetry metadata
+
+# Welcome to Poetry!
+
+This will download and install the latest version of Poetry,
+a dependency and package manager for Python.
+
+It will add the `poetry` command to Poetry's bin directory, located at:
+
+/Users/emnichols/.local/bin
+
+You can uninstall at any time by executing this script with the --uninstall option,
+and these changes will be reverted.
+
+Installing Poetry (1.1.13): Done
+
+Poetry (1.1.13) is installed now. Great!
+
+To get started you need Poetry's bin directory (/Users/emnichols/.local/bin) in your `PATH`
+environment variable.
+
+Add `export PATH="/Users/emnichols/.local/bin:$PATH"` to your shell configuration file.
+
+Alternatively, you can call Poetry explicitly with `/Users/emnichols/.local/bin/poetry`.
+
+You can test that everything is set up by executing:
+
+`poetry --version`
+
+(base) emnichols@Lizs-MBP w255_flask_ci_demo % cd ..
+(base) emnichols@Lizs-MBP w255-async % poetry --version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP w255-async % curl -sSL https://install.python-poetry.org | python3 -
+Retrieving Poetry metadata
+
+The latest version (1.1.13) is already installed.
+(base) emnichols@Lizs-MBP w255-async % which poetry
+poetry not found
+(base) emnichols@Lizs-MBP w255-async % /Users/emnichols/.local/bin/poetry
+Poetry version 1.1.13
+
+USAGE
+  poetry [-h] [-q] [-v [<...>]] [-V] [--ansi] [--no-ansi] [-n] <command> [<arg1>] ... [<argN>]
+
+ARGUMENTS
+  <command>              The command to execute
+  <arg>                  The arguments of the command
+
+GLOBAL OPTIONS
+  -h (--help)            Display this help message
+  -q (--quiet)           Do not output any message
+  -v (--verbose)         Increase the verbosity of messages: "-v" for normal output, "-vv" for more verbose output and "-vvv" for debug
+  -V (--version)         Display this application version
+  --ansi                 Force ANSI output
+  --no-ansi              Disable ANSI output
+  -n (--no-interaction)  Do not ask any interactive question
+
+AVAILABLE COMMANDS
+  about                  Shows information about Poetry.
+  add                    Adds a new dependency to pyproject.toml.
+  build                  Builds a package, as a tarball and a wheel by default.
+  cache                  Interact with Poetry's cache
+  check                  Checks the validity of the pyproject.toml file.
+  config                 Manages configuration settings.
+  debug                  Debug various elements of Poetry.
+  env                    Interact with Poetry's project environments.
+  export                 Exports the lock file to alternative formats.
+  help                   Display the manual of a command
+  init                   Creates a basic pyproject.toml file in the current directory.
+  install                Installs the project dependencies.
+  lock                   Locks the project dependencies.
+  new                    Creates a new Python project at <path>.
+  publish                Publishes a package to a remote repository.
+  remove                 Removes a package from the project dependencies.
+  run                    Runs a command in the appropriate environment.
+  search                 Searches for packages on remote repositories.
+  self                   Interact with Poetry directly.
+  shell                  Spawns a shell within the virtual environment.
+  show                   Shows information about packages.
+  update                 Update the dependencies as according to the pyproject.toml file.
+  version                Shows the version of the project or bumps it when a valid bump rule is provided.
+
+(base) emnichols@Lizs-MBP w255-async % mkdir poetry_demo
+(base) emnichols@Lizs-MBP w255-async % cd poetry_demo
+(base) emnichols@Lizs-MBP poetry_demo % poetry version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP poetry_demo % export PATH=$PATH:$HOME/.poetry/bin
+(base) emnichols@Lizs-MBP poetry_demo % poetry --version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP poetry_demo % nano ~/.bashrc
+(base) emnichols@Lizs-MBP poetry_demo % poetry --version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP poetry_demo % nano ~/.profile                                               
+(base) emnichols@Lizs-MBP poetry_demo % poetry --version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP poetry_demo % nano ~/.zprofile
+(base) emnichols@Lizs-MBP poetry_demo % poetry --version
+zsh: command not found: poetry
+(base) emnichols@Lizs-MBP poetry_demo % nano ~/.zshrc
+(base) emnichols@Lizs-MBP poetry_demo % 
