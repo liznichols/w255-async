@@ -3,4 +3,207 @@
 (base) emnichols@Lizs-MBP pytest % poetry new testing_demo
 Created package testing_demo in testing_demo
 (base) emnichols@Lizs-MBP pytest % cd testing_demo
+(base) emnichols@Lizs-MBP testing_demo % nano testing_demo/main.py
+(base) emnichols@Lizs-MBP testing_demo % nano pyproject.toml
+(base) emnichols@Lizs-MBP testing_demo % poetry add fastapi
+Creating virtualenv testing-demo-gV99wGa6-py3.8 in /Users/emnichols/Library/Caches/pypoetry/virtualenvs
+Using version ^0.78.0 for fastapi
 
+Updating dependencies
+Resolving dependencies... (5.5s)
+
+Writing lock file
+
+Package operations: 15 installs, 0 updates, 0 removals
+
+  • Installing idna (3.3)
+  • Installing sniffio (1.2.0)
+  • Installing anyio (3.6.1)
+  • Installing pyparsing (3.0.9)
+  • Installing typing-extensions (4.2.0)
+  • Installing attrs (21.4.0)
+  • Installing iniconfig (1.1.1)
+  • Installing packaging (21.3)
+  • Installing pluggy (1.0.0)
+  • Installing py (1.11.0)
+  • Installing pydantic (1.9.0)
+  • Installing starlette (0.19.1)
+  • Installing tomli (2.0.1)
+  • Installing fastapi (0.78.0)
+  • Installing pytest (7.1.2)
+(base) emnichols@Lizs-MBP testing_demo % cd tests      
+(base) emnichols@Lizs-MBP tests % nano test_testing_demo.py
+(base) emnichols@Lizs-MBP tests % nano test_testing_demo.py
+(base) emnichols@Lizs-MBP tests % poetry run pytest
+========================================================================================== test session starts ===========================================================================================
+platform darwin -- Python 3.8.3, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/emnichols/w255-async/pytest/testing_demo/tests
+plugins: anyio-3.6.1
+collected 0 items / 1 error                                                                                                                                                                              
+
+================================================================================================= ERRORS =================================================================================================
+_________________________________________________________________________________ ERROR collecting test_testing_demo.py __________________________________________________________________________________
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/python.py:608: in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/pathlib.py:533: in import_path
+    importlib.import_module(module_name)
+../../../../opt/anaconda3/lib/python3.8/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1014: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:991: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:975: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:671: in _load_unlocked
+    ???
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:159: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:359: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+../../../../opt/anaconda3/lib/python3.8/ast.py:47: in parse
+    return compile(source, filename, mode, flags,
+E     File "/Users/emnichols/w255-async/pytest/testing_demo/tests/test_testing_demo.py", line 15
+E       assert response.status_code = 200
+E                                   ^
+E   SyntaxError: invalid syntax
+======================================================================================== short test summary info =========================================================================================
+ERROR test_testing_demo.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================ 1 error in 0.15s ============================================================================================
+(base) emnichols@Lizs-MBP tests % poetry add requests
+Using version ^2.27.1 for requests
+
+Updating dependencies
+Resolving dependencies... (0.5s)
+
+Writing lock file
+
+Package operations: 4 installs, 0 updates, 0 removals
+
+  • Installing certifi (2021.10.8)
+  • Installing charset-normalizer (2.0.12)
+  • Installing urllib3 (1.26.9)
+  • Installing requests (2.27.1)
+(base) emnichols@Lizs-MBP tests % poetry add requests -D
+Using version ^2.27.1 for requests
+
+Updating dependencies
+Resolving dependencies... (0.1s)
+
+Writing lock file
+
+No dependencies to install or update
+(base) emnichols@Lizs-MBP tests % poetry run pytest     
+========================================================================================== test session starts ===========================================================================================
+platform darwin -- Python 3.8.3, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/emnichols/w255-async/pytest/testing_demo/tests
+plugins: anyio-3.6.1
+collected 0 items / 1 error                                                                                                                                                                              
+
+================================================================================================= ERRORS =================================================================================================
+_________________________________________________________________________________ ERROR collecting test_testing_demo.py __________________________________________________________________________________
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/python.py:608: in _importtestmodule
+    mod = import_path(self.path, mode=importmode, root=self.config.rootpath)
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/pathlib.py:533: in import_path
+    importlib.import_module(module_name)
+../../../../opt/anaconda3/lib/python3.8/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1014: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:991: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:975: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:671: in _load_unlocked
+    ???
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:159: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+../../../../Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/lib/python3.8/site-packages/_pytest/assertion/rewrite.py:359: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+../../../../opt/anaconda3/lib/python3.8/ast.py:47: in parse
+    return compile(source, filename, mode, flags,
+E     File "/Users/emnichols/w255-async/pytest/testing_demo/tests/test_testing_demo.py", line 15
+E       assert response.status_code = 200
+E                                   ^
+E   SyntaxError: invalid syntax
+======================================================================================== short test summary info =========================================================================================
+ERROR test_testing_demo.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================ 1 error in 0.15s ============================================================================================
+(base) emnichols@Lizs-MBP tests % nano test_testing_demo.py
+(base) emnichols@Lizs-MBP tests % poetry run pytest        
+========================================================================================== test session starts ===========================================================================================
+platform darwin -- Python 3.8.3, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/emnichols/w255-async/pytest/testing_demo/tests
+plugins: anyio-3.6.1
+collected 2 items                                                                                                                                                                                        
+
+test_testing_demo.py ..                                                                                                                                                                            [100%]
+
+=========================================================================================== 2 passed in 1.36s ============================================================================================
+(base) emnichols@Lizs-MBP tests % poetry run pytest -vv
+========================================================================================== test session starts ===========================================================================================
+platform darwin -- Python 3.8.3, pytest-7.1.2, pluggy-1.0.0 -- /Users/emnichols/Library/Caches/pypoetry/virtualenvs/testing-demo-gV99wGa6-py3.8/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/emnichols/w255-async/pytest/testing_demo/tests
+plugins: anyio-3.6.1
+collected 2 items                                                                                                                                                                                        
+
+test_testing_demo.py::test_version PASSED                                                                                                                                                          [ 50%]
+test_testing_demo.py::test_health PASSED                                                                                                                                                           [100%]
+
+=========================================================================================== 2 passed in 0.16s ============================================================================================
+(base) emnichols@Lizs-MBP tests % exit()
+function> exit
+(base) emnichols@Lizs-MBP tests % exit
+exit:75: maximum nested function level reached; increase FUNCNEST?
+(base) emnichols@Lizs-MBP tests % cd ..
+(base) emnichols@Lizs-MBP testing_demo % cd ..
+(base) emnichols@Lizs-MBP pytest % exit
+exit:78: maximum nested function level reached; increase FUNCNEST?
+(base) emnichols@Lizs-MBP pytest % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) emnichols@Lizs-MBP pytest % cd ..
+(base) emnichols@Lizs-MBP w255-async % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	pytest/
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) emnichols@Lizs-MBP w255-async % git add .
+(base) emnichols@Lizs-MBP w255-async % git commit -m "2.7 pytest demo"
+[master be69f7a] 2.7 pytest demo
+ 12 files changed, 420 insertions(+)
+ create mode 100644 pytest/pytest_demo_code.txt
+ create mode 100644 pytest/testing_demo/README.rst
+ create mode 100644 pytest/testing_demo/poetry.lock
+ create mode 100644 pytest/testing_demo/pyproject.toml
+ create mode 100644 pytest/testing_demo/testing_demo/__init__.py
+ create mode 100644 pytest/testing_demo/testing_demo/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 pytest/testing_demo/testing_demo/__pycache__/main.cpython-38.pyc
+ create mode 100644 pytest/testing_demo/testing_demo/main.py
+ create mode 100644 pytest/testing_demo/tests/__init__.py
+ create mode 100644 pytest/testing_demo/tests/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 pytest/testing_demo/tests/__pycache__/test_testing_demo.cpython-38-pytest-7.1.2.pyc
+ create mode 100644 pytest/testing_demo/tests/test_testing_demo.py
+(base) emnichols@Lizs-MBP w255-async % git push
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 9.48 KiB | 4.74 MiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/liznichols/w255-async.git
+   3377dfb..be69f7a  master -> master
+(base) emnichols@Lizs-MBP w255-async % 
