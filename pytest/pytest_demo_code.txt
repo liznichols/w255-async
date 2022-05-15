@@ -1,0 +1,6 @@
+(base) emnichols@Lizs-MBP w255-async % mkdir pytest
+(base) emnichols@Lizs-MBP w255-async % cd pytest
+(base) emnichols@Lizs-MBP pytest % poetry new testing_demo
+Created package testing_demo in testing_demo
+(base) emnichols@Lizs-MBP pytest % cd testing_demo
+
